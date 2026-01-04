@@ -1916,3 +1916,184 @@ body.dark-mode .dark-mode-toggle:hover {
 
 /* Add Roboto font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
+
+/* Add this to the end of your style.css file - MOBILE RESPONSIVE STYLES */
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 73px;
+        flex-direction: column;
+        background: var(--md-surface);
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease;
+        box-shadow: var(--md-elevation-3);
+        border-top: 1px solid var(--md-outline-variant);
+        padding: 20px 0;
+        gap: 0;
+        z-index: 999;
+        max-height: calc(100vh - 73px);
+        overflow-y: auto;
+    }
+
+    body.dark-mode .nav-links {
+        background: var(--md-surface);
+        border-top: 1px solid #49454F;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 16px 20px;
+        width: 100%;
+        border-radius: 0;
+        font-size: 1rem;
+    }
+
+    .nav-cta {
+        margin: 12px 20px;
+        width: calc(100% - 40px);
+        display: block;
+    }
+
+    /* Mobile Menu Toggle Button */
+    .mobile-menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .mobile-menu-toggle span {
+        width: 100%;
+        height: 3px;
+        background: var(--md-primary);
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* Logo adjustments */
+    .nav-brand {
+        font-size: 1.1rem;
+    }
+
+    /* Hero section adjustments */
+    .hero {
+        padding: 100px 20px 60px;
+        min-height: 80vh;
+    }
+
+    .glitch {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .motto {
+        font-size: 1rem;
+    }
+
+    /* Service grid adjustments */
+    .services {
+        padding: 60px 5%;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        min-height: auto;
+        padding: 24px 20px;
+    }
+
+    /* Footer adjustments */
+    .contact-section {
+        padding: 48px 5% 24px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .terminal-body {
+        padding: 24px 16px;
+    }
+
+    .bottom-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bottom-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* Dark mode toggle position adjustment for mobile */
+    .dark-mode-toggle {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .dark-mode-toggle i {
+        font-size: 1.2rem;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .nav-brand {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        padding: 14px 4%;
+    }
+
+    .service-card {
+        padding: 20px 16px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+}
